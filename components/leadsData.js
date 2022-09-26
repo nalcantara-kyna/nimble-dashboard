@@ -1,0 +1,70 @@
+export const leadsDatas = [
+  {
+    id: "11ssahda111",
+    firstName: "Lead1",
+    lastName: "One",
+    email: "one@gmail.com",
+    phoneNumber: "+639111111111",
+    dateCreated: "Sep 6, 2022 11:44am",
+    dateUpdated: "Sep 7, 2022 11:11am",
+    leadStages: "Lead",
+    leadsLevel: 5,
+    remainingDays: 1,
+  },
+  {
+    id: "22kldsjfslk222",
+    firstName: "Lead2",
+    lastName: "Two",
+    email: "two@gmail.com",
+
+    phoneNumber: "+639222222222",
+    dateCreated: "Sep 8, 2022 2:34pm",
+    dateUpdated: null,
+    leadStages: "Lead Stage",
+    leadsLevel: 1,
+    remainingDays: 3,
+  },
+  {
+    id: "3333sdfkjhskjf3",
+    firstName: "Lead3",
+    lastName: "Three",
+    email: "three@gmail.com",
+
+    phoneNumber: "+639333333333",
+    dateCreated: "Sep 8, 2022 2:34pm",
+    dateUpdated: "Sep 8, 2022 2:24pm",
+    leadStages: "Propect",
+    leadsLevel: 2,
+    remainingDays: 3,
+  },
+  {
+    id: "4444dskfslkf4",
+    firstName: "Lead4",
+    lastName: "Four",
+    email: "four@gmail.com",
+    // dropDownSample: [
+    //   {
+    //     label: "drop1",
+    //     value: "drop1",
+    //   },
+    //   {
+    //     label: "drop2",
+    //     value: "drop2",
+    //   },
+    //   {
+    //     label: "drop3",
+    //     value: "drop3",
+    //   },
+    //   {
+    //     label: "drop4",
+    //     value: "drop4",
+    //   },
+    // ],
+    phoneNumber: "+639444444444",
+    dateCreated: "Sep 8, 2022 9:45pm",
+    dateUpdated: "Sep 8, 2022 11:41am",
+    leadStages: "Prospect",
+    leadsLevel: 2,
+    remainingDays: 4,
+  },
+];
