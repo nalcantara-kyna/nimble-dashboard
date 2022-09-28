@@ -42,24 +42,7 @@ export const leadsDatas = [
     firstName: "Lead4",
     lastName: "Four",
     email: "four@gmail.com",
-    // dropDownSample: [
-    //   {
-    //     label: "drop1",
-    //     value: "drop1",
-    //   },
-    //   {
-    //     label: "drop2",
-    //     value: "drop2",
-    //   },
-    //   {
-    //     label: "drop3",
-    //     value: "drop3",
-    //   },
-    //   {
-    //     label: "drop4",
-    //     value: "drop4",
-    //   },
-    // ],
+    
     phoneNumber: "+639444444444",
     dateCreated: "Sep 8, 2022 9:45pm",
     dateUpdated: "Sep 8, 2022 11:41am",

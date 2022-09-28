@@ -22,10 +22,6 @@ const  dropDownSample =[
     label: "drop3",
     value: "drop3",
   },
-  {
-    label: "drop4",
-    value: "drop4",
-  },
 ]
 
   useEffect(() => {
@@ -38,7 +34,7 @@ const  dropDownSample =[
       {/* Most Recent Lead Cards */}
       <View style={styles.leadsCards}>
     
-        {leads.map((item, index) => (
+        {leads.map((item) => (
          <PaperProvider  key={item.id}>
           <View key={item.id} style={styles.leads}>
             <View style={styles.leadsProfileandDropdown}>
@@ -46,31 +42,33 @@ const  dropDownSample =[
                 {item.firstName.split(" ").map((word) => word[0])}
                 {item.lastName.split(" ").map((word) => word[0])}
               </Text>
-                <DropDown
+                {/* <DropDown
                  key={item.id}
                 label={"--"}
                 mode={"outlined"}
-                visible = {showDropDown === "dropdown1"}
-                showDropDown={setShowDropDown("dropdown1")}
-                onDismiss={setShowDropDown("")}
-                // visible = {showDropDown}
-                // showDropDown={() => setShowDropDown(true)}
-                // onDismiss={() => setShowDropDown(false)}
+                visible = {showDropDown === item.id}
+                showDropDown={() => {
+                  setShowDropDown(item.id)
+                }}
+                onDismiss={ () => {
+                  setShowDropDown("")
+                }}
                 value={drops}
                 setValue={setDrops}
                 list={dropDownSample}
-              />
+              /> */}
             </View>
             <Text style={styles.leadsName}>{item.firstName} {item.lastName}</Text>
-            <Text style={styles.leadsInfo}>{item.email}</Text>
-            <Text style={styles.leadsInfo}>{item.phoneNumber}</Text>
+            {/* <Text style={styles.leadsInfo}>{item.email}</Text> */}
+            {/* <Text style={styles.leadsInfo}>{item.phoneNumber}</Text> */}
             <View style={styles.spacerStyle} />
             { item.dateCreated? <Text style={styles.leadsInfo}>Created: {item.dateCreated}</Text> : null }
             { item.dateUpdated? <Text style={styles.leadsInfo}>Updated: {item.dateUpdated}</Text> : null }
-            <View style={styles.spacerStyle} />
-            <Text style={styles.leadStages}>{item.leadStages}</Text>
-            <View style={styles.spacerStyle} />
-            <Text style={styles.leadsInfo}>Remaning Days:  <Text style={styles.leadStages}>{item.remainingDays}</Text></Text>
+
+            {/* <View style={styles.spacerStyle} /> */}
+            {/* <Text style={styles.leadStages}>{item.leadStages}</Text> */}
+            {/* <View style={styles.spacerStyle} /> */}
+            {/* <Text style={styles.leadsInfo}>Remaning Days:  <Text style={styles.leadStages}>{item.remainingDays}</Text></Text> */}
           </View>
           </PaperProvider>
         ))}
@@ -84,7 +82,7 @@ const  dropDownSample =[
 const styles = StyleSheet.create({
   // Most recent leads styles
   leadsContainer: {
-    width: "100%", alignItems: "baseline", flexDirection: "column", justifyContent: "center",
+    width: "100%", alignItems: "baseline", flexDirection: "column", justifyContent: "center", padding: 30
   },
   spacerStyle: {
     marginBottom: 10,
@@ -99,7 +97,7 @@ const styles = StyleSheet.create({
     flex: 1, width: "100%", flexDirection: "row", justifyContent: "space-between",
   },
   leadsNameProfile: {
-    backgroundColor: "#cdcdcd", color: "#fff", fontSize: 20, letterSpacing: 2, fontWeight: "bold", padding: 30, marginLeft: 20, marginBottom: 10, borderRadius: 50,
+    backgroundColor: "#cdcdcd", color: "#fff", fontSize: 15, letterSpacing: 2, fontWeight: "bold", padding: 23, marginLeft: 20, marginBottom: 10, borderRadius: 50,
   },
   leadsName: {
     fontSize: 20, fontWeight: "bold", marginBottom: 10,

@@ -9,8 +9,8 @@ export const AtAGlance = () => {
 
   // SAMPLE DATA:
   // lead stage
-  const leadStageCurrentMonth = 18;
-  const leadStagePreviousMonth = 1;
+  const leadStageCurrentMonth = 1;
+  const leadStagePreviousMonth = 100;
   // prospect
   const prospectCurrentMonth = 10;
   const propectPreviousMonth = 15;
@@ -60,7 +60,9 @@ export const AtAGlance = () => {
 
   return (
     <View style={styles.glanceContainer}>
-      {/* lead stage */}
+      
+      <View style={styles.glanceWrap}>
+        {/* lead stage */}
       <View style={styles.glanceCard}>
         <View style={styles.glanceCountandRating}>
           <Text style={styles.glanceNumber}>{leadStage}</Text>
@@ -76,22 +78,27 @@ export const AtAGlance = () => {
         </View>
         <Text style={styles.glanceSub}>Propect</Text>
       </View>
+      </View>
+      
+      <View style={styles.glanceWrap}>
       {/* site visit */}
       <View style={styles.glanceCard}>
-        <View style={styles.glanceCountandRating}>
-          <Text style={styles.glanceNumber}>{siteVisit}</Text>
-          <Text style={siteVisitCurrentMonth>siteVisitPreviousMonth?styles.glanceRatingGreen:styles.glanceRatingRed}>{siteVisitMonthly}</Text>
-        </View>
-        <Text style={styles.glanceSub}>Site Visit</Text>
-      </View>
-      {/* reservation */}
-      <View style={styles.glanceCard}>
-        <View style={styles.glanceCountandRating}>
-          <Text style={styles.glanceNumber}>{reservation}</Text>
-          <Text style={reservationCurrentMonth>reservationtPreviousMonth?styles.glanceRatingGreen:styles.glanceRatingRed}>{reservationMonthly}
-          </Text></View>
-        <Text style={styles.glanceSub}>Reservation</Text>
-      </View>
+            <View style={styles.glanceCountandRating}>
+              <Text style={styles.glanceNumber}>{siteVisit}</Text>
+              <Text style={siteVisitCurrentMonth>siteVisitPreviousMonth?styles.glanceRatingGreen:styles.glanceRatingRed}>{siteVisitMonthly}</Text>
+            </View>
+            <Text style={styles.glanceSub}>Site Visit</Text>
+          </View>
+          {/* reservation */}
+          <View style={styles.glanceCard}>
+            <View style={styles.glanceCountandRating}>
+              <Text style={styles.glanceNumber}>{reservation}</Text>
+              <Text style={reservationCurrentMonth>reservationtPreviousMonth?styles.glanceRatingGreen:styles.glanceRatingRed}>{reservationMonthly}
+              </Text></View>
+            <Text style={styles.glanceSub}>Reservation</Text>
+          </View>
+      </View >
+      
     </View>
   );
 };
@@ -99,7 +106,10 @@ export const AtAGlance = () => {
 const styles = StyleSheet.create({
   // at a glance styles
   glanceContainer: {
-    height: "auto", flexDirection: "column", alignItems: "baseline",
+   flex:1, width: "100%", height: "auto", flexDirection: "column", alignItems: "baseline", padding: 30
+  },
+  glanceWrap: { 
+    flex: 1, width: "80%", flexDirection: "row", justifyContent: "space-between",
   },
   glanceCard: {
     flexDirection: "column", alignItems: "baseline", marginBottom: 15,
