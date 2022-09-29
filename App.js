@@ -5,30 +5,46 @@ import { StyleSheet, Text, View, ScrollView } from "react-native";
 import { MostRecentLead } from "./components/MostRecentLead";
 import { MostRecentLeadCompactCard } from "./components/MostRecentLeadCompactCard";
 import { LeadsProfile } from "./components/LeadsProfile";
+import TabProperties from "./components/TabProperties";
+import TabAddresses from "./components/TabAddresses";
+import ShippingAddress from "./components/ShippingAddress";
+import TabActivities from "./components/TabActivities";
 
 export default function App() {
   return (
     <ScrollView>
       <View style={styles.container}>
-        <Text style={styles.heading}>Dashboard</Text>
-        <Text style={styles.dashboardTitles}>At a glance</Text>
+        {/* <Text style={styles.heading}>Dashboard</Text> */}
+        {/* <Text style={styles.dashboardTitles}>At a glance</Text> */}
 
         {/* At a Glance Component */}
-        <AtAGlance />
-        <Text style={styles.dashboardTitles}>Most recent Lead</Text>
+        {/* <AtAGlance /> */}
+        {/* <Text style={styles.dashboardTitles}>Most recent Lead</Text> */}
 
         {/* Most Recent Lead Component*/}
-        <MostRecentLead />
-        <Text style={styles.dashboardTitles}>Lead list</Text>
+        {/* <MostRecentLead /> */}
+        {/* <Text style={styles.dashboardTitles}>Lead list</Text> */}
 
          {/* Most Recent Lead Compact Card Component*/}
-         <MostRecentLeadCompactCard />
+         {/* <MostRecentLeadCompactCard /> */}
 
          {/* Leads Profile*/}
-         <Text style={styles.dashboardTitles}>Leads Profile</Text>
+         {/* <Text style={styles.dashboardTitles}>Leads Profile</Text> */}
          <LeadsProfile/>
 
-        
+         {/* <Text style={styles.tabs}>Properties</Text>
+         <TabProperties />
+          <TabProperties />
+           <TabProperties /> */}
+         
+         <Text style={styles.tabs}>Addresses</Text>
+         <TabAddresses />
+         <ShippingAddress/>
+
+          {/* <Text style={styles.tabs}>Activites</Text>
+          <TabActivities/>
+          <TabActivities/> */}
+
         <StatusBar style="auto" />
       </View>
     </ScrollView>
@@ -44,6 +60,9 @@ const styles = StyleSheet.create({
     color: "#d19999", fontSize: 30,  marginLeft: 30
   },
   dashboardTitles: {
-    fontSize: 20, fontWeight: "bold", color: "#777", marginTop: 30, marginBottom: 10, marginLeft: 30
+    fontSize: 20, fontWeight: "bold", color: "#777", marginTop: 10, marginBottom: 20, marginLeft: 30
   },
+  tabs:{
+    fontSize: 20, fontWeight: "bold", color: "#777", marginTop: 1, marginBottom: 20, marginLeft: 10
+  }
 });

@@ -26,6 +26,7 @@ export const LeadsProfile = () => {
 
      {/* Profile Tabs */}
      <View style={styles.leadsProfileTabContainer}>
+      
       <TouchableOpacity>
         <Text style={styles.tab}>Properties</Text>
       </TouchableOpacity>
@@ -58,12 +59,12 @@ const styles = StyleSheet.create({
     flex:1, width: "100%",
   },
   LeadscoverPhoto:{
-    height: 100, width: "100%", position: "relative"
+    height: 110, width: "100%", position: "relative"
   },
   
   // leads profile photo
   leadsProfilePhotoContainer:{
-    position: "absolute",   top: 50, 
+    position: "absolute",   top: 60, 
   },
   leadsProfilePhoto:{
     position: "absolute",
@@ -72,7 +73,7 @@ const styles = StyleSheet.create({
 
   // profile info
   leadsProfileInfo:{
-  width: "100%", marginTop: 35,padding: 20,
+  width: "100%", marginTop: 45,padding: 20,
   },
   leadsProfileName:{
     fontSize: 22, fontWeight: "bold"
@@ -89,10 +90,10 @@ const styles = StyleSheet.create({
 
   // profile tab
   leadsProfileTabContainer:{
-    flex: 1, width: "100%", flexDirection: "row", justifyContent: "space-around", marginTop: 10, marginBottom: 30
+    flex: 1, width: "100%", flexDirection: "row", justifyContent: "space-between", marginBottom: 20
   },
   tab:{
-   flex:1, width:100, color: "#333", fontSize: 15, fontWeight: "bold",padding: 8, backgroundColor: "#fbfbfb", 
+   flex:1, width:117, color: "#999", fontSize: 15, fontWeight: "bold",padding: 8, backgroundColor: "#eeee", textAlign: "center"
   },
 });
 
