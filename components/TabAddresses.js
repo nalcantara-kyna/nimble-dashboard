@@ -1,7 +1,9 @@
-import React, {useEffect, useState} from 'react'
-import { StyleSheet, Text, View, ScrollView, Switch } from "react-native";
+import React from 'react'
+import { StyleSheet, Text, View } from "react-native";
+import ShippingAddress from './ShippingAddress';
 export default function TabAddresses() {
 
+const isPrimaryContact = false
 
   return (
     <View style={styles.TabAddressesContainer}>
@@ -22,20 +24,16 @@ export default function TabAddresses() {
             </View>
             <View style={styles.contactContainer}>
                 <Text style={styles.details}>+63497453856</Text>
-                <Text style={styles.details}>sampleEmail@gmail.com</Text>
+                <Text style={styles.details}>narcyalcantara001@gmail.com</Text>
             </View>
         </View>
-        <Text style={styles.primary}>Primary</Text>
-
-
-       {/* Shipping Address component */}
-
+        <Text style={isPrimaryContact?styles.primaryGreen : styles.primaryGray }>Primary</Text>
     </View>
   )
 }
 const styles = StyleSheet.create({
     TabAddressesContainer:{
-         flex:1, width:"100%", alignItems: "baseline", flexDirection: "column", borderBottomWidth: 1, borderBottomColor: "#cdcdcd", paddingBottom: 15, paddingHorizontal: 10
+         flex:1, width:"100%", alignItems: "baseline", flexDirection: "column", borderBottomWidth: 1, borderBottomColor: "#cdcdcd", paddingBottom: 15, paddingHorizontal: 10,
     },
     name:{
         fontSize: 14, fontWeight: "bold"
@@ -53,7 +51,10 @@ const styles = StyleSheet.create({
     details:{
         color: "#444", fontSize: 12, fontWeight: "normal"
     },
-    primary:{
+    primaryGreen:{
     color: "#fff", backgroundColor:"green", fontSize: 10, fontWeight: "bold", marginTop: 5, padding: 4, borderRadius: 10
-    }
+    },
+    primaryGray:{
+        color: "#fff", backgroundColor:"#cccd", fontSize: 10, fontWeight: "bold", marginTop: 5, padding: 4, borderRadius: 10
+        }
 })

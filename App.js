@@ -9,6 +9,7 @@ import TabProperties from "./components/TabProperties";
 import TabAddresses from "./components/TabAddresses";
 import ShippingAddress from "./components/ShippingAddress";
 import TabActivities from "./components/TabActivities";
+import LeadsOrangeCard from "./components/LeadsOrangeCard";
 
 export default function App() {
   return (
@@ -30,20 +31,20 @@ export default function App() {
 
          {/* Leads Profile*/}
          {/* <Text style={styles.dashboardTitles}>Leads Profile</Text> */}
-         <LeadsProfile/>
+         {/* <LeadsProfile/> */}
 
          {/* <Text style={styles.tabs}>Properties</Text>
-         <TabProperties />
-          <TabProperties />
-           <TabProperties /> */}
+         <TabProperties /> */}
          
-         <Text style={styles.tabs}>Addresses</Text>
+         {/* <Text style={styles.tabs}>Addresses</Text>
          <TabAddresses />
-         <ShippingAddress/>
+         <ShippingAddress/> */}
+         
 
-          {/* <Text style={styles.tabs}>Activites</Text>
-          <TabActivities/>
+          {/* <Text style={styles.tabs}>Activities</Text>
           <TabActivities/> */}
+
+          <LeadsOrangeCard/>
 
         <StatusBar style="auto" />
       </View>
@@ -54,7 +55,7 @@ export default function App() {
 const styles = StyleSheet.create({
   // app styles
   container: {
-    flex: 1, width: "100%", backgroundColor: "#fff", alignItems: "baseline", justifyContent: "center", marginTop: 40,
+    backgroundColor: "#fff", justifyContent: "center", alignItems: "baseline", marginTop: 40, marginHorizontal: 15
   },
   heading: {
     color: "#d19999", fontSize: 30,  marginLeft: 30

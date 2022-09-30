@@ -18,7 +18,7 @@ export default function ShippingAddress() {
 }
 const styles = StyleSheet.create({
     shippingAddressContainer: {
-         flex: 1,  width: "100%", alignItems: "baseline", paddingLeft: 10, marginVertical: 20
+         flex: 1,  width: "100%", alignItems: "baseline", marginVertical: 20, paddingLeft: 10
   },
   shippingTitle:{
     fontSize: 20, fontWeight: "bold"
